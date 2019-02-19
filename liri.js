@@ -15,7 +15,7 @@ var UserInput = process.argv[3];
 
 
 
-  UserInputs (liriOption, UserInput);
+ 
   
 
 
@@ -41,6 +41,7 @@ var UserInput = process.argv[3];
   }
 
   // -----------------axios
+  
   function bands(UserInput){
     var queryUrl = "https://rest.bandsintown.com/artists/" + UserInput + "/events?app_id=codingbootcamp";
     axios.get(queryUrl)
@@ -54,3 +55,7 @@ var UserInput = process.argv[3];
     }
       //------------------Spotify
     
+
+//-------exicute-----
+
+      UserInputs (liriOption, UserInput);
