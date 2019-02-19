@@ -22,3 +22,16 @@ axios.get("https://rest.bandsintown.com/artists/" +UserInput + "/events?app_id=c
   });
  
   //------------------Spotify
+
+
+
+
+
+  //--------------------------
+
+
+
+  // concert-this
+  // spotify-this-song
+  // movie-this
+  // do-what-it-says
