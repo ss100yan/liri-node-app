@@ -26,10 +26,10 @@ var UserInput = process.argv[3];
       bands(UserInput);
       break;
     case 'spotify-this-song':
-      // code block
+      spfy(UserInput)
       break;
       case 'movie-this':
-      // code block
+      omdb(UserInput);
       break;
       case 'do-what-it-says':
       // code block
@@ -40,8 +40,9 @@ var UserInput = process.argv[3];
 
   }
 
-  // -----------------axios
-  
+  // --------------------Axios
+
+  //--------------------Bands in town
   function bands(UserInput){
     var queryUrl = "https://rest.bandsintown.com/artists/" + UserInput + "/events?app_id=codingbootcamp";
     axios.get(queryUrl)
@@ -53,9 +54,30 @@ var UserInput = process.argv[3];
         console.log(error);
       });
     }
-      //------------------Spotify
-    
+    //--------------------OMBD
+    function omdb(UserInput){
+      var queryUrl = " http://www.omdbapi.com/?t=" + UserInput + " i=tt3896198&apikey=ed4f19eb";
+      axios.get(queryUrl)
+        .then(function (response) {
+          console.log(response);
+          console.log(UserInput)
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+      }
 
-//-------exicute-----
+      //------------------Spotify
+      function spfy(UserInput){
+      spotify.search({ type: 'track', query: UserInput  }, function(err, data) {
+        if (err) {
+          return console.log('Error occurred: ' + err);
+        }
+      
+      console.log(data); 
+      });
+    }
+
+    //-------exicute-----
 
       UserInputs (liriOption, UserInput);
