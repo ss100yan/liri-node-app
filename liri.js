@@ -8,7 +8,7 @@ var keys = require('./keys.js');
 var Spotify = require('node-spotify-api');
 var spotify = new Spotify(keys.spotify);
 var axios = require("axios");
-
+var fs = require('fs');
 var liriOption = process.argv[2]; 
 var UserInput = process.argv[3];
 
@@ -32,7 +32,7 @@ var UserInput = process.argv[3];
       omdb(UserInput);
       break;
       case 'do-what-it-says':
-      // code block
+      fs();
       break;
     default:
     console.log("Invalid Option. Try: \nconcert-this \nspotify-this-song \nmovie-this \ndo-what-it-says")
@@ -54,6 +54,9 @@ var UserInput = process.argv[3];
         console.log(error);
       });
     }
+                                           //     Name of the venue
+                                           // Venue location
+                                           // Date of the Event (use moment to format this as "MM/DD/YYYY")
     //--------------------OMBD
     function omdb(UserInput){
       var queryUrl = " http://www.omdbapi.com/?t=" + UserInput + " i=tt3896198&apikey=ed4f19eb";
@@ -66,8 +69,24 @@ var UserInput = process.argv[3];
           console.log(error);
         });
       }
+                                                            // * Title of the movie.
+                                                            // * Year the movie came out.
+                                                            // * IMDB Rating of the movie.
+                                                               // * Rotten Tomatoes Rating of the movie.
+                                                            // * Country where the movie was produced.
+                                                                // * Language of the movie.
+                                                            // * Plot of the movie.
+                                                               // * Actors in the movie.
+   
+     
+                                                              //  If the user doesn't type a movie in, the program will output data for the movie 'Mr. Nobody.'
 
-      //------------------Spotify
+
+                                                              //  If you haven't watched "Mr. Nobody," then you should: http://www.imdb.com/title/tt0485947/
+                                                               
+                                                              //  It's on Netflix!
+     
+                                                               //------------------Spotify
       function spfy(UserInput){
       spotify.search({ type: 'track', query: UserInput  }, function(err, data) {
         if (err) {
@@ -77,6 +96,22 @@ var UserInput = process.argv[3];
       console.log(data); 
       });
     }
+                                                                     // Artist(s)
+                                                                     // The song's name
+                                                                     // A preview link of the song from Spotify
+                                                                     // The album that the song is from
+
+
+    // ------------------------------------fs
+    function fs(){
+    fs.readFile('/random', function (err) {
+      if (err) throw err;
+      console.log('successfully ......');
+    });
+        }
+    //-----------------------------------log.txt
+
+
 
     //-------exicute-----
 
