@@ -88,7 +88,7 @@ var UserInput = process.argv[3];
 
           console.log("IMDB Rating: " + response.data.imdbRating+"\n");
           
-          console.log("Rotten Tomatoes Rating: " + response.data.Ratings+"\n"); // ???????
+          console.log("Rotten Tomatoes Rating: " +  RottenTomatoes(response.data)+"\n");
           
           console.log("Country of production: " + response.data.Country+"\n");
           
@@ -104,18 +104,18 @@ var UserInput = process.argv[3];
         });
       }
                                                                     
-                                          //function to get proper Rotten Tomatoes Rating
-                            //  function getRottenTomatoesRatingObject (data) {
-                            //  return data.Ratings.find(function (item) {
-                            //     return item.Source === "Rotten Tomatoes";
-                            //       });
-                            //       }
+    //-------------------Rotten Tomatoes Rating
 
-                            //      function getRottenTomatoesRatingValue (data) {
-                            //     return getRottenTomatoesRatingObject(data).Value;
-                                //  }                              
+    function RTObject (data) {
+        return data.Ratings.find(function (item) {
+              return item.Source === "Rotten Tomatoes";
+                    });
+                       }
+                         function RottenTomatoes (data) {
+                           return RTObject(data).Value;
+                             }                              
      
-     //------------------Spotify
+     //------------------Spotify------------------------------------------------
 
       function spfy(UserInput){
       spotify.search({ type: 'track', query: UserInput  }, function(err, data) {
