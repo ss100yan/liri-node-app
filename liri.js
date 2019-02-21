@@ -13,12 +13,7 @@ var liriOption = process.argv[2];
 var UserInput = process.argv[3];
 
 
-
-
- 
   
-
-
   //------------------Switch statemant
   function UserInputs (liriOption, UserInput){
   switch(liriOption) {
@@ -48,7 +43,7 @@ var UserInput = process.argv[3];
     axios.get(queryUrl)
       .then(function (response) {
        
-        console.log("**********Events for"+" "+ UserInput +"*********");
+        console.log("**********Events for"+" "+ UserInput +"*********"+"\n");
       
          var concerts= response;
 
@@ -56,11 +51,11 @@ var UserInput = process.argv[3];
 
           console.log(i+1);
 
-          console.log("Venue Name: " +concerts.data[i].venue.name);
+          console.log("Venue Name: " +concerts.data[i].venue.name+"\n");
                           
-          console.log("Venue Location: " +concerts.data[i].venue.city);
+          console.log("Venue Location: " +concerts.data[i].venue.city+"\n");
         
-          console.log("Date of the Event: "+concerts.data[i].datetime);  //  (use moment to format this as "MM/DD/YYYY")
+          console.log("Date of the Event: "+concerts.data[i].datetime+"\n");  //  (use moment to format this as "MM/DD/YYYY")
         
                
         }
@@ -85,23 +80,23 @@ var UserInput = process.argv[3];
       axios.get(queryUrl)
         .then(function (response) {
              
-          console.log("**********Movie Info for"+" "+ UserInput +"*********");
+          console.log("**********Movie Info for"+" "+ UserInput +"*********"+"\n");
 
-          console.log("Title: " + response.data.Title);
+          console.log("Title: " + response.data.Title+"\n");
 
-          console.log("Release Year: " + response.data.Year);
+          console.log("Release Year: " + response.data.Year+"\n");
 
-          console.log("IMDB Rating: " + response.data.imdbRating);
+          console.log("IMDB Rating: " + response.data.imdbRating+"\n");
           
-          console.log("Rotten Tomatoes Rating: " + response.data.Ratings); // ???????
+          console.log("Rotten Tomatoes Rating: " + response.data.Ratings+"\n"); // ???????
           
-          console.log("Country of production: " + response.data.Country);
+          console.log("Country of production: " + response.data.Country+"\n");
           
-          console.log("Language: " + response.data.Language);
+          console.log("Language: " + response.data.Language+"\n");
           
-          console.log("Plot: " + response.data.Plot);
+          console.log("Plot: " + response.data.Plot+"\n");
 
-          console.log("Actors: " + response.data.Actors);
+          console.log("Actors: " + response.data.Actors+"\n");
 
         })
         .catch(function (error) {
@@ -127,12 +122,18 @@ var UserInput = process.argv[3];
         if (err) {
           return console.log('Error occurred: ' + err);
         }
-     console.log("**********Spotify Info for the song-'"+ UserInput+  "'*********");
-      console.log('Artist(s) -'+" "+ data.tracks.items[1].album.artists[0].name); 
-      console.log("The song's name -"+" "+ data.tracks.items[1].album.artists[0].name); 
-      console.log('A preview link of the song from Spotify -'+" "+ data.tracks.items[1].album.artists[0].name); 
-      console.log('The album that the song is from -'+" "+ data.tracks.items[1].album.artists[0].name); 
-      
+        for (i=0; data.tracks.items.length; i++ )
+        {
+      console.log("**********Spotify Info for the song-'"+ UserInput+  "'*********"+"\n");
+
+      console.log('Artist(s) -'+" "+ data.tracks.items[i].artists[0].name+"\n"); 
+
+      console.log("The song's name -"+" "+ data.tracks.items[i].name+"\n"); 
+
+      console.log('A preview link of the song from Spotify -'+" "+ data.tracks.items[i].preview_url +"\n"); 
+
+      console.log('The album that the song is from -'+" "+ data.tracks.items[i].album.name+"\n"); 
+        }
       });
     }
 
@@ -144,10 +145,9 @@ var UserInput = process.argv[3];
       console.log('successfully ......');
     });
         }
-    //-----------------------------------log.txt
+  
 
 
-
-    //-------exicute-----
+    //-------execute-----
 
       UserInputs (liriOption, UserInput);
