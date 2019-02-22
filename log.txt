@@ -1,0 +1,120 @@
+---------Spotify Info------------
+0
+artist(s): Tierra Cali
+song name: Como Perro Amarrado
+preview song: null
+album: Si Tú Te Vas
+---------Spotify Info------------
+1
+artist(s): Daniel Cardozo
+song name: Hitazos: Amores Como el Nuestro / Que Fue / Algún día / Tu Amor Me Quema / Arrepiéntete / Tarjetita de Invitación / Empujaito / Si Tu Te Vas / El Aguacero / Tu Juguete / Mujer Que Mal Me Pagas...
+preview song: https://p.scdn.co/mp3-preview/97f16ffd25ddfa507ba7c6471fd423cd343ea0ed?cid=4b124cb5f1e64a22950523411e3c599c
+album: Hitazos: Amores Como el Nuestro / Que Fue / Algún día / Tu Amor Me Quema / Arrepiéntete / Tarjetita de Invitación / Empujaito / Si Tu Te Vas / El Aguacero / Tu Juguete / Mujer Que Mal Me Pagas...
+---------Spotify Info------------
+2
+artist(s): Los Angeles Azules
+song name: El Listón De Tu Pelo - Concierto Sinfónico Cumbia Fuzion
+preview song: null
+album: Cómo Te Voy A Olvidar ¡Edición De Súper Lujo!
+---------Spotify Info------------
+3
+artist(s): Toma Tu Lugar
+song name: Como Te Amo
+preview song: https://p.scdn.co/mp3-preview/35d25a5a0e68c241e4e6223678f1e204da8cf4ce?cid=4b124cb5f1e64a22950523411e3c599c
+album: Como Te Amo
+---------Spotify Info------------
+4
+artist(s): Los Angeles Azules
+song name: El Listón De Tu Pelo
+preview song: null
+album: Cómo Te Voy A Olvidar ¡Edición De Súper Lujo!
+---------Spotify Info------------
+5
+artist(s): Marco Barrientos
+song name: En Ti / Te Entrego / No Hay Nadie Como Tú Medley
+preview song: https://p.scdn.co/mp3-preview/4c6b3bb3ef80b9b52f07f78d9b0f013205233075?cid=4b124cb5f1e64a22950523411e3c599c
+album: Legado de Adoración
+---------Spotify Info------------
+6
+artist(s): Marco Barrientos & Yvonne Muñoz
+song name: En Tí/Te Entrego/No Hay Nadie Como Tú (Medley)
+preview song: https://p.scdn.co/mp3-preview/296d47a0db4b43dd54fb6d4012da82ef35b137ee?cid=4b124cb5f1e64a22950523411e3c599c
+album: Levántate y Resplandece
+---------Spotify Info------------
+7
+artist(s): Los Angeles Azules
+song name: El Listón De Tu Pelo
+preview song: null
+album: Como Te Voy A Olvidar (Baile Total)
+---------Spotify Info------------
+8
+artist(s): Rocío Dúrcal
+song name: Ya Te Olvidé
+preview song: https://p.scdn.co/mp3-preview/8458095d55c0bdf3eefaefeab91f107af5f62a66?cid=4b124cb5f1e64a22950523411e3c599c
+album: Como Tu Mujer
+---------Spotify Info------------
+9
+artist(s): Caravanchela
+song name: Como Tú (Te Fuiste)
+preview song: https://p.scdn.co/mp3-preview/1e34c451b21c4da8ed77d98965eef713816c0665?cid=4b124cb5f1e64a22950523411e3c599c
+album: Como Tú (Te Fuiste)
+---------Spotify Info------------
+10
+artist(s): Rayo & Toby
+song name: Como Tu Te Mueve
+preview song: https://p.scdn.co/mp3-preview/a6109fcaf5a6ea4af5126d18e9e99e2ff2f8442f?cid=4b124cb5f1e64a22950523411e3c599c
+album: Como Tu Te Mueve
+---------Spotify Info------------
+11
+artist(s): Los Baron De Apodaca
+song name: Como Tu Ninguna
+preview song: https://p.scdn.co/mp3-preview/878820d1f0b46b6cc1032159fed1cdf27537c118?cid=4b124cb5f1e64a22950523411e3c599c
+album: El Hombre Que Mas Te Amo
+---------Spotify Info------------
+12
+artist(s): Uriel Lozano
+song name: Como una Lluvia de Sexo / Tu Unico Dueño / Esta Noche Tu y Yo / Solo Quiero Hablar / Yo Te Prometo - En Vivo
+preview song: https://p.scdn.co/mp3-preview/853bbf94dfe80aef624254b11054a956c9e0ebdd?cid=4b124cb5f1e64a22950523411e3c599c
+album: 20 Grandes Éxitos
+---------Spotify Info------------
+13
+artist(s): Tierra Cali
+song name: Como Perro Amarrado
+preview song: https://p.scdn.co/mp3-preview/f206dd895677d55a3f2e96ee24b99e9d352d3b8c?cid=4b124cb5f1e64a22950523411e3c599c
+album: Si Tú Te Vas (Los Creadores del Sacadito)
+---------Spotify Info------------
+14
+artist(s): Veronica Leal
+song name: Te Alabo
+preview song: https://p.scdn.co/mp3-preview/822184dc82665b88bbbb366ea49216b9d330bf7a?cid=4b124cb5f1e64a22950523411e3c599c
+album: Nadie Como Tu
+---------Spotify Info------------
+15
+artist(s): Colombia All Stars
+song name: Las Caleñas Son Como Las Flores
+preview song: https://p.scdn.co/mp3-preview/8d873c5e309fb4efb1327a53a5c96707f2493f8e?cid=4b124cb5f1e64a22950523411e3c599c
+album: Tu Tierra Te Extraña
+---------Spotify Info------------
+16
+artist(s): Los Yaguarú
+song name: Yagua Mix: Alma De Acero / Pum Pum Corazoncito / Razón Di Mi Vida (Mi Amante Niña) / Llueve En Mi / Como Decirte Adiós / Pero Tu Mirada / Corazón Vacío / Cuentale / Conga Y Timbal / Cumbia Francesa (Cuando Llegaste Tu) / Vida No Te Vayas
+preview song: https://p.scdn.co/mp3-preview/67b8055a13aadcc3a0be4eb522a00c2c806bbed5?cid=4b124cb5f1e64a22950523411e3c599c
+album: Los Gigantes De La Cumbia, VOL. 1, Disco 1
+---------Spotify Info------------
+17
+artist(s): Los Rieleros Del Norte
+song name: Como Tú Decidas
+preview song: null
+album: Ni El Diablo Te Va A Querer
+---------Spotify Info------------
+18
+artist(s): Alejandro Sanz
+song name: Como te echo de menos
+preview song: https://p.scdn.co/mp3-preview/449e1d56ece186da2fb6466963afea594af9c3eb?cid=4b124cb5f1e64a22950523411e3c599c
+album: Si Tu Me Miras
+---------Spotify Info------------
+19
+artist(s): Marcos Witt
+song name: Yo Quiero Ser Como Tú
+preview song: https://p.scdn.co/mp3-preview/a14723201c713f9dd1cdfff50ebdc71cac96670e?cid=4b124cb5f1e64a22950523411e3c599c
+album: Te Exaltamos

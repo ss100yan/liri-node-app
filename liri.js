@@ -1,7 +1,6 @@
 require("dotenv").config();
 
 
-//-------------- variables
 
 
 var keys = require('./keys.js');
@@ -15,6 +14,7 @@ var moment = require('moment');
 
   
   //------------------Switch statemant
+
   function UserInputs (liriOption, UserInput){
   switch(liriOption) {
     case 'concert-this':
@@ -38,6 +38,7 @@ var moment = require('moment');
   // --------------------Axios
 
                 //--------------------Bands in town
+
   function bands(UserInput){
     var queryUrl = "https://rest.bandsintown.com/artists/" + UserInput + "/events?app_id=codingbootcamp";
     axios.get(queryUrl)
@@ -133,16 +134,33 @@ var moment = require('moment');
 
       console.log("The song's name -"+" "+ data.tracks.items[i].name+"\n"); 
 
-      console.log('A preview link of the song from Spotify -'+" "+ data.tracks.items[i].preview_url +"\n"); 
+      console.log('A preview link  -'+" "+ data.tracks.items[i].preview_url +"\n"); 
 
-      console.log('The album that the song is from -'+" "+ data.tracks.items[i].album.name+"\n"); 
-        }
+      console.log('The album  -'+" "+ data.tracks.items[i].album.name+"\n"); 
+
+
+
+      fs.appendFileSync("log.txt", "---------Spotify Info------------\n");
+   
+      fs.appendFileSync("log.txt", i +"\n");
+
+      fs.appendFileSync("log.txt", "artist(s): " + data.tracks.items[i].artists[0].name + "\n");
+     
+      fs.appendFileSync("log.txt", "song name: " + data.tracks.items[i].name +"\n");
+     
+      fs.appendFileSync("log.txt", "preview song: " + data.tracks.items[i].preview_url +"\n");
+    
+      fs.appendFileSync("log.txt", "album: " + data.tracks.items[i].album.name + "\n");
+     
+      
+     
+            }
       });
     }
 
 
-    // ------------------------------------fs
-    //function for reading out of random.txt file  
+    // -------------fs() from random.txt---------
+    
 function Fs(){
 	fs.readFile('random.txt', 'utf8', function(err, data){
 		if (err){ 
@@ -154,7 +172,7 @@ function Fs(){
 }
 
 
-    //-------execute-----
+ 
 
       UserInputs (liriOption, UserInput);
     
