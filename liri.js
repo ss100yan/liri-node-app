@@ -10,7 +10,7 @@ var spotify = new Spotify(keys.spotify);
 var axios = require("axios");
 var fs = require('fs');
 var liriOption = process.argv[2]; 
-var UserInput = process.argv[3];
+var UserInput = process.argv.slice(3).join(" ");
 
 
   
@@ -27,7 +27,7 @@ var UserInput = process.argv[3];
       omdb(UserInput);
       break;
       case 'do-what-it-says':
-      fs();
+      Fs();
       break;
     default:
     console.log("Invalid Option. Try: \nconcert-this \nspotify-this-song \nmovie-this \ndo-what-it-says")
@@ -64,11 +64,11 @@ var UserInput = process.argv[3];
         console.log(error);
       });
     }
-   
+        //----------------------- Moment------
 
-                       
+             
 
-            //--------------------OMDB
+         //--------------------OMDB-----------
     function omdb(UserInput){
 
       if (UserInput==null){UserInput='Mr. Nobody.'}
@@ -139,15 +139,19 @@ var UserInput = process.argv[3];
 
 
     // ------------------------------------fs
-    function fs(){
-    fs.readFile('/random', function (err) {
-      if (err) throw err;
-      console.log('successfully ......');
-    });
-        }
-  
+    //function for reading out of random.txt file  
+function Fs(){
+	fs.readFile('random.txt', 'utf8', function(err, data){
+		if (err){ 
+			return console.log(err);
+		}
+        var dataArr = data.split(',');
+        UserInputs(dataArr[0], dataArr[1]);
+	});
+}
 
 
     //-------execute-----
 
       UserInputs (liriOption, UserInput);
+      debugger;
