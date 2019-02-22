@@ -124,7 +124,7 @@ var UserInput = process.argv.slice(3).join(" ");
         }
         for (i=0; data.tracks.items.length; i++ )
         {
-      console.log("**********Spotify Info for the song-'"+ UserInput+  "'*********"+"\n");
+      console.log("**********Spotify Info*********"+"\n");
 
       console.log('Artist(s) -'+" "+ data.tracks.items[i].artists[0].name+"\n"); 
 
@@ -146,7 +146,7 @@ function Fs(){
 			return console.log(err);
 		}
         var dataArr = data.split(',');
-        UserInputs(dataArr[0], dataArr[1]);
+        UserInputs(dataArr[0], dataArr.slice(1).join(" "));
 	});
 }
 
@@ -154,4 +154,4 @@ function Fs(){
     //-------execute-----
 
       UserInputs (liriOption, UserInput);
-      debugger;
+    
