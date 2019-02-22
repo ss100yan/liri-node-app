@@ -11,7 +11,7 @@ var axios = require("axios");
 var fs = require('fs');
 var liriOption = process.argv[2]; 
 var UserInput = process.argv.slice(3).join(" ");
-
+var moment = require('moment');
 
   
   //------------------Switch statemant
@@ -43,7 +43,7 @@ var UserInput = process.argv.slice(3).join(" ");
     axios.get(queryUrl)
       .then(function (response) {
        
-        console.log("**********Events for"+" "+ UserInput +"*********"+"\n");
+        console.log("-------------Events for"+" "+ UserInput +"-----------------"+"\n");
       
          var concerts= response;
 
@@ -54,8 +54,12 @@ var UserInput = process.argv.slice(3).join(" ");
           console.log("Venue Name: " +concerts.data[i].venue.name+"\n");
                           
           console.log("Venue Location: " +concerts.data[i].venue.city+"\n");
+
+           //----------------------- Moment------
+
+          var Dtime = moment(concerts.data[i].datetime).format('L');
         
-          console.log("Date of the Event: "+concerts.data[i].datetime+"\n");  //  (use moment to format this as "MM/DD/YYYY")
+          console.log("Date of the Event: "+Dtime+"\n"); 
         
                
         }
@@ -64,9 +68,7 @@ var UserInput = process.argv.slice(3).join(" ");
         console.log(error);
       });
     }
-        //----------------------- Moment------
-
-             
+       
 
          //--------------------OMDB-----------
     function omdb(UserInput){
@@ -80,7 +82,7 @@ var UserInput = process.argv.slice(3).join(" ");
       axios.get(queryUrl)
         .then(function (response) {
              
-          console.log("**********Movie Info for"+" "+ UserInput +"*********"+"\n");
+          console.log("------------Movie Info for"+" "+ UserInput +"--------------"+"\n");
 
           console.log("Title: " + response.data.Title+"\n");
 
@@ -118,13 +120,14 @@ var UserInput = process.argv.slice(3).join(" ");
      //------------------Spotify------------------------------------------------
 
       function spfy(UserInput){
+        // "The Sign"; //default Song
       spotify.search({ type: 'track', query: UserInput  }, function(err, data) {
         if (err) {
           return console.log('Error occurred: ' + err);
         }
         for (i=0; data.tracks.items.length; i++ )
         {
-      console.log("**********Spotify Info*********"+"\n");
+      console.log("---------Spotify Info------------"+"\n");
 
       console.log('Artist(s) -'+" "+ data.tracks.items[i].artists[0].name+"\n"); 
 
