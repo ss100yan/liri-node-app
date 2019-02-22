@@ -101,6 +101,26 @@ var moment = require('moment');
 
           console.log("Actors: " + response.data.Actors+"\n");
 
+         fs.appendFileSync("log.txt", "------------Movie Info for"+" "+ UserInput +"--------------"+"\n");
+   
+         fs.appendFileSync("log.txt","Title: " + response.data.Title+"\n");
+
+         fs.appendFileSync("log.txt","Release Year: " + response.data.Year+"\n");
+     
+         fs.appendFileSync("log.txt","IMDB Rating: " + response.data.imdbRating+"\n");
+     
+         fs.appendFileSync("log.txt","Rotten Tomatoes Rating: " +  RottenTomatoes(response.data)+"\n");
+    
+         fs.appendFileSync("log.txt","Country of production: " + response.data.Country+"\n");
+     
+         fs.appendFileSync("log.txt","Language: " + response.data.Language+"\n");
+   
+         fs.appendFileSync("log.txt","Plot: " + response.data.Plot+"\n");
+
+         fs.appendFileSync("log.txt","Actors: " + response.data.Actors+"\n");
+                 
+
+         
         })
         .catch(function (error) {
           console.log(error);
