@@ -1,71 +1,78 @@
 require("dotenv").config();
 
-
-
-
 var keys = require('./keys.js');
-var Spotify = require('node-spotify-api');
-var spotify = new Spotify(keys.spotify);
-var axios = require("axios");
-var fs = require('fs');
-var liriOption = process.argv[2]; 
-var UserInput = process.argv.slice(3).join(" ");
-var moment = require('moment');
+ var Spotify = require('node-spotify-api');
+  var spotify = new Spotify(keys.spotify);
+    var axios = require("axios");
+      var fs = require('fs');
+        var liriOption = process.argv[2]; 
+          var UserInput = process.argv.slice(3).join(" ");
+            var moment = require('moment');
 
-  
-  //------------------Switch statemant
+             //------------------Switch statemant
 
-  function UserInputs (liriOption, UserInput){
-  switch(liriOption) {
-    case 'concert-this':
-      bands(UserInput);
-      break;
-    case 'spotify-this-song':
-      spfy(UserInput)
-      break;
-      case 'movie-this':
-      omdb(UserInput);
-      break;
-      case 'do-what-it-says':
-      Fs();
-      break;
-    default:
-    console.log("Invalid Option. Try: \nconcert-this \nspotify-this-song \nmovie-this \ndo-what-it-says")
-  }
+                 function UserInputs (liriOption, UserInput){
+                   switch(liriOption) {
+                      case 'concert-this':
+                         bands(UserInput);
+                      break;
+                      case 'spotify-this-song':
+                         spfy(UserInput)
+                      break;
+                      case 'movie-this':
+                          omdb(UserInput);
+                      break;
+                      case 'do-what-it-says':
+                           Fs();
+                      break;
+                      default:
+                      console.log("Invalid Option. Try: \nconcert-this \nspotify-this-song \nmovie-this \ndo-what-it-says")
+                     }
 
-  }
+                      }
 
-  // --------------------Axios
+// --------------------Axios
 
-                //--------------------Bands in town
+       //--------------------Bands in town
 
-  function bands(UserInput){
-    var queryUrl = "https://rest.bandsintown.com/artists/" + UserInput + "/events?app_id=codingbootcamp";
-    axios.get(queryUrl)
+                                                          function bands(UserInput){
+ var queryUrl = "https://rest.bandsintown.com/artists/" + UserInput + "/events?app_id=codingbootcamp";
+
+     axios.get(queryUrl)
+
       .then(function (response) {
-       
-        console.log("-------------Events for"+" "+ UserInput +"-----------------"+"\n");
-      
-         var concerts= response;
 
-        for (var i = 0; i < concerts.data.length; i++) {  
+         console.log("-------------Events for"+" "+ UserInput +"-----------------"+"\n");
 
-          console.log(i+1);
+             var concerts= response;
 
-          console.log("Venue Name: " +concerts.data[i].venue.name+"\n");
-                          
-          console.log("Venue Location: " +concerts.data[i].venue.city+"\n");
+                 for (var i = 0; i < concerts.data.length; i++) {  
 
-           //----------------------- Moment------
+                     console.log(i+1);
 
-          var Dtime = moment(concerts.data[i].datetime).format('L');
+                        console.log("Venue Name: " +concerts.data[i].venue.name+"\n");
+
+                          console.log("Venue Location: " +concerts.data[i].venue.city+"\n");
+
+                             //----------------------- Moment------
+
+                                var Dtime = moment(concerts.data[i].datetime).format('L');
+
+                                    console.log("Date of the Event: "+Dtime+"\n"); 
+
+                                    fs.appendFileSync("log.txt", "-------------Events for"+" "+ UserInput +"-----------------"+"\n");
+   
+                                  fs.appendFileSync("log.txt",i+1+"\n");
+
+                              fs.appendFileSync("log.txt","Venue Name: " +concerts.data[i].venue.name+"\n");
+     
+                        fs.appendFileSync("log.txt","Venue Location: " +concerts.data[i].venue.city+"\n");
+     
+                   fs.appendFileSync("log.txt","Date of the Event: "+Dtime+"\n");
         
-          console.log("Date of the Event: "+Dtime+"\n"); 
-        
-               
-        }
-      })
-      .catch(function (error) {
+                  }
+               })
+           .catch(function (error) {
         console.log(error);
       });
     }
