@@ -6,7 +6,8 @@ var keys = require('./keys.js');
     var axios = require("axios");
       var fs = require('fs');
         var liriOption = process.argv[2]; 
-          var UserInput = process.argv.slice(3).join(" ");
+          var UserInput = process.argv[3];  
+             // .slice(3).join(" ");
             var moment = require('moment');
 
              //------------------Switch statemant
@@ -81,7 +82,7 @@ var keys = require('./keys.js');
          //--------------------OMDB-----------
     function omdb(UserInput){
 
-      if (UserInput==null){UserInput='Mr. Nobody.'}
+      if (UserInput==null){UserInput='Mr. Nobody.'};
 
 
       var queryUrl = " http://www.omdbapi.com/?t=" + UserInput + " &y=&plot=short&apikey=ed4f19eb";
@@ -148,7 +149,10 @@ var keys = require('./keys.js');
      //------------------Spotify------------------------------------------------
 
       function spfy(UserInput){
+
         // "The Sign"; //default Song
+        if (UserInput==null){UserInput="The Sign"};
+
       spotify.search({ type: 'track', query: UserInput  }, function(err, data) {
         if (err) {
           return console.log('Error occurred: ' + err);

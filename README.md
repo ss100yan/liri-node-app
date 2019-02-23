@@ -19,11 +19,13 @@ do-what-it-says
 TECHNOLOGIES 
 Javascript
 Nodejs
+
 Node packages:
 Node-Spotify-API
 Axios
 Moment
 DotEnv
+
 APIs:
 Bands in Town
 OMDB
