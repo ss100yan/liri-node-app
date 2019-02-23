@@ -6,8 +6,8 @@ var keys = require('./keys.js');
     var axios = require("axios");
       var fs = require('fs');
         var liriOption = process.argv[2]; 
-          var UserInput = process.argv[3];  
-             // .slice(3).join(" ");
+          var UserInput = process.argv.slice(3).join(" ");
+            
             var moment = require('moment');
 
              //------------------Switch statemant
