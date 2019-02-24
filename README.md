@@ -4,8 +4,8 @@ Language Interpretation and Recognition Interface.
 
 ## Overview
 
-LIRI is a command line node app that takes in parameters to retrieve data from Bands in town, Spotify, OMDB APIs and display in the command line using node.js.
-GIF video of the functionlity of the app is provided in the the GIF folder.
+LIRI is a command line node app that takes in parameters to retrieve data from Bands in town, Spotify, OMDB APIs and display in the command line.
+Video of the functionlity of the app is provided in the the GIF folder.
 
 
 ### Getting Started :
