@@ -1,6 +1,5 @@
 # liri-node-app
 
-Creator: Stoyan Shivarov
 
 ## Overview
 
@@ -37,3 +36,5 @@ APIs:
 * Bands in Town
 * OMDB
 * Node-Spotify-API
+
+###### Creator: Stoyan Shivarov
